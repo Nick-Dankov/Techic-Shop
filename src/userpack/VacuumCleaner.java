@@ -5,8 +5,8 @@
 import java.util.Scanner;
 
 public class VacuumCleaner extends Techic {
-    private int power; //moshnost
-    private int volume; //objem
+    private int power; //мощность
+    private int volume; //объем
 
     public VacuumCleaner() {
         init();
@@ -16,9 +16,9 @@ public class VacuumCleaner extends Techic {
     public void init() {
         super.init();
         Scanner input = new Scanner(System.in);
-        System.out.print("Мощность= ");
+        System.out.print("Мощность: ");
         this.power = input.nextInt();
-        System.out.print("Объем= ");
+        System.out.print("Объем: ");
         this.volume = input.nextInt();
 
     }
@@ -33,6 +33,6 @@ public class VacuumCleaner extends Techic {
 
     @Override
     public String toString() {
-        return super.toString() + ", Мощность: " + getPower() + ", Объем: " + getVolume();
+        return super.toString() + "\nМощность: " + getPower() + "\nОбъем: " + getVolume();
     }
 }

@@ -6,11 +6,13 @@ import java.util.Scanner;
 
 public abstract class Techic {
     private String name;
-    private int sizel; //dlina
-    private int sizeh; //visota
-    private int sizew; //shirina
-    private int weight; //ves
-    private int price; //cena
+    private int sizel; //длина
+    private int sizeh; //высота
+    private int sizew; //ширина
+    private int weight; //вес
+    private int price; //цена
+
+
 
     public void init() {
         Scanner input = new Scanner(System.in);
@@ -58,7 +60,7 @@ public abstract class Techic {
 
     @Override
     public String toString() {
-        return "Техника \n" + "Название: '" + getName() + ", Размеры(ДхШхВ см): " + getSizel() + "x" + getSizew() + "x" + getSizeh() +
-                ", Вес (кг): " + getWeight() + ", Цена: " + getPrice();
+        return "Техника \n" + "Название: '" + getName() + "'\n" + "Размеры(ДхШхВ см): " + getSizel() + "x" + getSizew() + "x" + getSizeh() +
+                "\nВес (кг): " + getWeight() + "\nЦена: " + getPrice();
     }
 }
