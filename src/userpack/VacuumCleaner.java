@@ -1,10 +1,10 @@
-/**
+package userpack; /**
  * Created by User on 05.10.2016.
  */
 
 import java.util.Scanner;
 
-public class VacuumCleaner extends Techic {
+public class VacuumCleaner extends Technic {
     private int power; //мощность
     private int volume; //объем
 

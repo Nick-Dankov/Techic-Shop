@@ -1,4 +1,4 @@
-/**
+package userpack; /**
  * Created by User on 05.10.2016.
  */
 
@@ -10,10 +10,12 @@ public class MainClass {
         System.out.printf("Welcome to magaz techniki!\n");
         System.out.print("Сколько техники добавлять: ");
         int countTech = input.nextInt();
-        Techic masTech[] = new Techic[countTech];
+        Technic masTech[] = new Technic[countTech];
 
         for (int i = 0; i < masTech.length; i++) {
-            masTech[i] = new VacuumCleaner();
+            System.out.println("0 - Пылесос\n1 - Ноутбук");
+            int TypeT = input.nextInt();
+            masTech[i]=Technic.create(TypeT);
         }
 
         for (int i = 0; i < masTech.length; i++) {

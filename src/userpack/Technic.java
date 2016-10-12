@@ -1,10 +1,10 @@
-/**
+package userpack; /**
  * Created by User on 05.10.2016.
  */
 
 import java.util.Scanner;
 
-public abstract class Techic {
+public abstract class Technic {
     private String name;
     private int sizel; //длина
     private int sizeh; //высота
@@ -12,6 +12,15 @@ public abstract class Techic {
     private int weight; //вес
     private int price; //цена
 
+
+    public static Technic create (int TypeT){
+        TypeTecnik var = TypeTecnik.values()[TypeT];
+        switch (var.ordinal()){
+            case 0: {return new VacuumCleaner();}
+            case 1: {return new Laptop();}
+            default: throw new RuntimeException(" Нет такого типа!");
+        }
+    }
 
 
     public void init() {
